@@ -19,6 +19,44 @@
       .bg-black {
         background-color: black !important;
       }
+
+      .carousel-card {
+        margin-right: 10px;
+        border: 0px;
+      }
+
+      @media (max-width: 767px) {
+        .carousel-inner .carousel-item > div {
+          display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+          display: block;
+        }
+      }
+
+      .carousel-inner .carousel-item.active,
+      .carousel-inner .carousel-item-next,
+      .carousel-inner .carousel-item-prev {
+        display: flex;
+      }
+
+      /* medium and up screens */
+      @media (min-width: 768px) {
+        .carousel-inner .carousel-item-end.active,
+        .carousel-inner .carousel-item-next {
+          transform: translateX(25%);
+        }
+
+        .carousel-inner .carousel-item-start.active,
+        .carousel-inner .carousel-item-prev {
+          transform: translateX(-25%);
+        }
+      }
+
+      .carousel-inner .carousel-item-end,
+      .carousel-inner .carousel-item-start {
+        transform: translateX(0);
+      }
     </style>
   </head>
   <body class="bg-black text-light">
@@ -71,6 +109,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Main -->
     <main class="container">
       <!-- Prima Riga -->
@@ -120,6 +159,471 @@
           </div>
         </div>
       </div>
+
+      <!-- Il carosello è stato preso da questo sito:
+           https://www.codeply.com/p/0CWffz76Q9 -->
+
+      <!-- Primo Carosello-->
+      <div class="row mt-4">
+        <!-- Trending -->
+        <div class="col-12">
+          <h4>Trending Now</h4>
+        </div>
+        <!-- Carosello -->
+        <div class="container text-center my-3">
+          <div class="row mx-auto my-auto justify-content-center">
+            <div
+              id="recipeCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- Immagini -->
+              <div class="carousel-inner d-flex" role="listbox">
+                <!-- Prima immagine -->
+                <div class="carousel-item active">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media0.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Seconda immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media1.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Terza immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media2.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quarta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media3.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quinta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media4.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sesta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media5.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Settima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media6.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ottava immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media7.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Nona immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media8.webp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Decima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media9.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Freccia di sinistra -->
+              <a
+                class="carousel-control-prev bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <!-- Freccia di destra -->
+              <a
+                class="carousel-control-next bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondo Carosello-->
+      <div class="row">
+        <!-- Watch it -->
+        <div class="col-12">
+          <h4>Watch it again</h4>
+        </div>
+        <!-- Carosello -->
+        <div class="container text-center my-3">
+          <div class="row mx-auto my-auto justify-content-center">
+            <div
+              id="recipeCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- Immagini -->
+              <div class="carousel-inner d-flex" role="listbox">
+                <!-- Prima immagine -->
+                <div class="carousel-item active">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media10.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Seconda immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media11.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Terza immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media12.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quarta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media13.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quinta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media14.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sesta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media15.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Settima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media16.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ottava immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media17.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Nona immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media18.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Decima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media19.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Freccia di sinistra -->
+              <a
+                class="carousel-control-prev bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <!-- Freccia di destra -->
+              <a
+                class="carousel-control-next bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terzo Carosello-->
+      <div class="row">
+        <!-- New Releases -->
+        <div class="col-12">
+          <h4>New Releases</h4>
+        </div>
+        <!-- Carosello -->
+        <div class="container text-center my-3">
+          <div class="row mx-auto my-auto justify-content-center">
+            <div
+              id="recipeCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- Immagini -->
+              <div class="carousel-inner d-flex" role="listbox">
+                <!-- Prima immagine -->
+                <div class="carousel-item active">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media20.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Seconda immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media21.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Terza immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media22.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quarta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media23.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Quinta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media24.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sesta immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media25.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Settima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img
+                          src="assets/media/media26.webp"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ottava immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media27.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Nona immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media28.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Decima immagine -->
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card carousel-card">
+                      <div class="card-img">
+                        <img src="assets/media/media29.jpg" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Freccia di sinistra -->
+              <a
+                class="carousel-control-prev bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <!-- Freccia di destra -->
+              <a
+                class="carousel-control-next bg-transparent w-aut"
+                href="#recipeCarousel"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -128,6 +632,24 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      let items = document.querySelectorAll(".carousel .carousel-item")
+
+      items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+          }
+          let cloneChild = next.cloneNode(true)
+          el.appendChild(cloneChild.children[0])
+          next = next.nextElementSibling
+        }
+      })
+    </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
