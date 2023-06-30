@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Mio CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/profile.css" rel="stylesheet" />
+    <!-- Logo Netflix-->
+    <link rel="icon" type="image/x-icon" href="assets/netflix_logo_mini.png" />
+    <title>Profile</title>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img height="40px" src="assets/netflix_logo.png"
+        /></a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container p-5">
+      <!-- Edit Profile -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+          <h1 class="w-50">Edit Profile</h1>
+        </div>
+        <hr class="w-75 float-start" />
+      </div>
+      <!-- Content -->
+      <div class="row justify-content-center justify-content-lg-start">
+        <!-- Sinistra -->
+        <div class="col-12 col-lg-2 py-4 py-lg-0 text-center mr-1">
+          <img src="assets/avatar.png" height="130px" />
+        </div>
+
+        <!-- Destra-->
+        <div class="col-12 col-md-10 destra">
+          <!-- Username -->
+          <div class="row">
+            <div class="col-12">
+              <input
+                type="text"
+                class="input-group-text bg-grey text-white w-100 left-text mb-1 input-name"
+                value="Strive Student"
+              />
+            </div>
+            <!-- Dropdown -->
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 text-grey pt-3"><h5>Language:</h5></div>
+                <div class="col-12">
+                  <div class="row d-flex align-items-center" id="dropdown">
+                    <div class="col-12 col-md-6 dropdown bg-black">
+                      <button
+                        class="btn btn-secondary dropdown-toggle bg-black"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        English
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-dark bg-black"
+                        aria-labelledby="dropdownMenuButton2"
+                      >
+                        <li>
+                          <a class="dropdown-item active" href="#">Italian</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+
+            <!-- Maturity Settings -->
+            <div class="col-12 text-grey my-1"><h5>Maturity Settings:</h5></div>
+            <div class="col-12 text-white">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm bg-darkgrey fw-bold my-2"
+              >
+                ALL MATURITY RATINGS
+              </button>
+            </div>
+            <div class="col-12 text-grey my-2">
+              <p class="text-white">
+                Show Titles of
+                <span class="fw-bold">all maturity</span> for this profile.
+              </p>
+            </div>
+            <div class="col-12 mb-1">
+              <button
+                class="btn btn-secondary bg-black text-grey btn-glow px-4"
+              >
+                EDIT
+              </button>
+            </div>
+            <hr class="my-4" />
+
+            <!-- Autoplay controls-->
+            <div class="col-12 text-grey"><h5>Autoplay controls:</h5></div>
+            <div class="form-check my-1">
+              <input
+                class="form-check-input bg-black big-checkbox border-secondary checkbox-border"
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Autoplay next episode in a series on all devices
+              </label>
+            </div>
+            <div class="form-check my-1">
+              <input
+                class="form-check-input bg-black big-checkbox border-secondary checkbox-border"
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Autoplay previews while browsing on all devices.
+              </label>
+            </div>
+            <hr class="my-2" />
+
+            <!-- Pulsanti -->
+            <div class="col-12 col-md-4">
+              <button
+                class="btn btn-secondary bg-black text-secondary btn-glow"
+              >
+                SAVE
+              </button>
+            </div>
+            <div class="col-12 col-md-4">
+              <button
+                class="btn btn-secondary bg-black text-secondary btn-glow"
+              >
+                CANCEL
+              </button>
+            </div>
+            <div class="col-12 col-md-4">
+              <button
+                class="btn btn-secondary bg-black text-secondary btn-glow"
+              >
+                DELETE&nbsp;PROFILE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
